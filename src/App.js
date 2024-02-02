@@ -13,6 +13,7 @@ import ProtectedRoute from './layout/ProtectedRoute';
 import PublicRoute from './layout/PublicRoute';
 import Alert from './components/Alert';
 import Spinner from './components/Spinner';
+import AddDokumen from './pages/AddDokumen';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -37,6 +38,7 @@ function App() {
               <Route path='/user' element={<RefundsPage />} />
               <Route path='/dokumen/:id' element={<Detail />}></Route>
               <Route path='/add' element={<AddData />}></Route>
+              <Route path='/tambahdokumen' element={<AddDokumen />}></Route>
               <Route path='/update' element={<UpdateData />}></Route>
               <Route path='/dokumen' element={<UserPage />}></Route>
               <Route path='/task' element={<TaskPage />}></Route>

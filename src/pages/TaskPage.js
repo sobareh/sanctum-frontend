@@ -65,7 +65,10 @@ const TaskPage = () => {
   ];
 
   return (
-    <Dashboard>
+    <Dashboard
+      headerDesc={'Detail User'}
+      headerTitle={'Detail User'}
+    >
       <div className='d-flex flex-column flex-xl-row'>
         {/*begin::Sidebar*/}
         <div className='flex-column flex-lg-row-auto w-100 w-xl-325px mb-10'>
@@ -103,7 +106,7 @@ const TaskPage = () => {
                 <div className='fw-bold'>Details</div>
                 {/*begin::Badge*/}
                 <div className='badge badge-light-danger d-inline'>
-                  Penyuluh
+                  Prakom
                 </div>
                 {/*begin::Badge*/}
               </div>
@@ -113,7 +116,7 @@ const TaskPage = () => {
               <div className='pb-5 fs-6'>
                 {/*begin::Details item*/}
                 <div className='fw-bold mt-5'>Jabatan</div>
-                <div className='text-gray-600'>Asisten Penyuluh Pajak</div>
+                <div className='text-gray-600'>Pranata Komputer Pelaksana</div>
                 {/*begin::Details item*/}
                 {/*begin::Details item*/}
                 <div className='fw-bold mt-5'>Email</div>
@@ -125,7 +128,7 @@ const TaskPage = () => {
                 {/*begin::Details item*/}
                 {/*begin::Details item*/}
                 <div className='fw-bold mt-5'>Seksi</div>
-                <div className='text-gray-600'>Seksi Pelayanan</div>
+                <div className='text-gray-600'>Pengujian dan Dokumentasi Sistem Perpajakan</div>
                 {/*begin::Details item*/}
               </div>
               {/*end::Details content*/}
@@ -201,7 +204,7 @@ const TaskPage = () => {
                     <div className='card-header border-0'>
                       {/*begin::Card title*/}
                       <div className='card-title'>
-                        <h2 className='fw-bold'>Tugas</h2>
+                        <h2 className='fw-bold'>Aplikasi yang dikerjakan</h2>
                       </div>
                       {/*end::Card title*/}
                     </div>
@@ -253,10 +256,10 @@ const TaskPage = () => {
                       </span>
                       {/*end::Svg Icon*/}
                       <div className='text-white fw-bold fs-4 mt-5'>
-                        Task Management Summary
+                        Halaman Detail User
                       </div>
                       <div className='fw-semibold fs-7 text-white'>
-                        untuk Penyuluh dan Asisten Penyuluh Pajak
+                        untuk Pelaksana dan Prakom seksi PDSP
                       </div>
                     </div>
                     {/*end::Body*/}
@@ -264,7 +267,7 @@ const TaskPage = () => {
                   {/*end::Reward Tier*/}
                 </div>
               </div>
-              <div className='card pt-4 mb-6 mb-xl-9'>
+              {/* <div className='card pt-4 mb-6 mb-xl-9'>
                 <div className='card-header border-0'>
                   <div className='card-title'>
                     <h2>Histori Tugas</h2>
@@ -476,9 +479,9 @@ const TaskPage = () => {
                     </div>
                   </div>
                   {/*end::Table*/}
-                </div>
+                {/* </div> */}
                 {/*end::Card body*/}
-              </div>
+              {/* </div> */} 
               {/*end::Card*/}
             </div>
             {/*end:::Tab pane*/}

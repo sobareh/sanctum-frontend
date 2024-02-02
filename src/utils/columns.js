@@ -88,7 +88,7 @@ export const COLUMNS = [
       return (
         <div className='text-end'>
           <Link
-            to={`/restitusi/${value}`}
+            to={`/dokumen/${value}`}
             className='btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1'
           >
             {/*begin::Svg Icon | path: icons/duotune/general/gen019.svg*/}

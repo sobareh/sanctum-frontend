@@ -6,7 +6,7 @@ import GlobalContext from '../context/GlobalContext';
 import { setAlertTrue } from '../context/GlobalActions';
 import Dashboard from '../layout/Dashboard';
 
-const AddRestitusi = () => {
+const AddDokumen = () => {
   const navigate = useNavigate();
   const { dispatch } = useContext(GlobalContext);
 
@@ -69,8 +69,8 @@ const AddRestitusi = () => {
 
   return (
     <Dashboard
-      headerTitle='Edit Data User'
-      headerDesc='untuk merubah data user.'
+      headerTitle='Edit Data Dokumen'
+      headerDesc='untuk merubah data dokumen pengujian aplikasi baru.'
     >
       <div className='row mb-5 gy-5 gx-xl-10 flex-center'>
         <div className='col-7'>
@@ -79,44 +79,43 @@ const AddRestitusi = () => {
               <form onSubmit={onSubmit} className='form'>
                 <div className='d-flex flex-column mb-8 fv-row'>
                   <label className='d-flex align-items-center fs-6 fw-bold mb-2'>
-                    <span className='required'>NIP Pegawai</span>
-                  </label>
-                  <InputMask
-                    mask='999999999999999999'
-                    onChange={handleChange}
-                    type='text'
-                    className='form-control form-control-solid'
-                    placeholder='199000000000000000'
-                    name='npwp'
-                  />
-                </div>
-                <div className='d-flex flex-column mb-8 fv-row'>
-                  <label className='d-flex align-items-center fs-6 fw-bold mb-2'>
-                    <span className='required'>Nama</span>
+                    <span className='required'>Nama Aplikasi</span>
                   </label>
                   <input
                     type='text'
                     className='form-control form-control-solid'
-                    placeholder='Masukkan nama wajib pajak'
+                    placeholder='Masukkan nama aplikasi yang diuji.'
                     name='nama_wp'
                     onChange={handleChange}
                   />
                 </div>
                 <div className='d-flex flex-column mb-8 fv-row'>
                   <label className='d-flex align-items-center fs-6 fw-bold mb-2'>
-                    <span className='required'>Jabatan</span>
+                    <span className='required'>Nomor Kardus Dokumen</span>
                   </label>
                   <input
                     type='text'
                     className='form-control form-control-solid'
-                    placeholder='Masukkan nomor BPS Permohonan Restitusi'
+                    placeholder='Masukkan nomor kardus dokumen'
+                    name='nama_wp'
+                    onChange={handleChange}
+                  />
+                </div>
+                <div className='d-flex flex-column mb-8 fv-row'>
+                  <label className='d-flex align-items-center fs-6 fw-bold mb-2'>
+                    <span className='required'>Lokasi Rak Dokumen</span>
+                  </label>
+                  <input
+                    type='text'
+                    className='form-control form-control-solid'
+                    placeholder='Masukkan nomor lokasi rak dokumen'
                     name='no_tindaklanjut_awal'
                     onChange={handleChange}
                   />
                 </div>
                 <div className='row g-9 mb-8'>
                   <div className='col-md-6 fv-row'>
-                    <label className='required fs-6 fw-bold mb-2'>Role</label>
+                    <label className='required fs-6 fw-bold mb-2'>Jenis Dokumen</label>
                     <select
                       onChange={handleChange}
                       className='form-select form-select-solid'
@@ -125,9 +124,11 @@ const AddRestitusi = () => {
                       data-placeholder='Select a Team Member'
                       name='user_id'
                     >
-                      <option value=''>Pilih Role...</option>
-                      <option value={1}>Administrator</option>
-                      <option value={0}>Staff</option>
+                      <option value=''>Pilih Jenis...</option>
+                      <option value={1}>SRS</option>
+                      <option value={2}>URS</option>
+                      <option value={3}>RFC</option>
+                      <option value={4}>Pengujian Baru</option>
                     </select>
                   </div>
                   {/* <div className='col-md-6 fv-row'>
@@ -173,7 +174,7 @@ const AddRestitusi = () => {
                   </div> */}
                 </div>
                 <div className='d-flex flex-column mb-8'>
-                  <label className='fs-6 fw-bold mb-2'>Photo Profil</label>
+                  <label className='fs-6 fw-bold mb-2'>Dokumen</label>
                   {/* <textarea
                     // onChange={handleChange}
                     className='form-control form-control-solid'
@@ -187,6 +188,16 @@ const AddRestitusi = () => {
                     placeholder='Masukkan nomor BPS Permohonan Restitusi'
                     name='no_tindaklanjut_awal'
                     onChange={handleChange}
+                  />
+                </div>
+                <div className='d-flex flex-column mb-8'>
+                  <label className='fs-6 fw-bold mb-2'>Keterangan</label>
+                  <textarea
+                    // onChange={handleChange}
+                    className='form-control form-control-solid'
+                    rows={3}
+                    // name='keterangan'
+                    placeholder='Type Target Details'
                   />
                 </div>
                 <div className='text-center'>
@@ -214,4 +225,4 @@ const AddRestitusi = () => {
   );
 };
 
-export default AddRestitusi;
+export default AddDokumen;
